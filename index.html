@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f6f3">
+    <meta name="description"
+        content="Find your next favorite pair at StepStyle Shoes. Explore considered sneakers, running shoes, and everyday essentials.">
+    <title>StepStyle Shoes — Find your stride</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="announcement">Complimentary delivery on orders over $120 <span aria-hidden="true">✦</span> Designed for
+        wherever life takes you</div>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="StepStyle Shoes home"><span
+                class="brand-mark">S<span>.</span></span><span>Rong Shop</span></a>
+        <button class="menu-toggle icon-button" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#shop">Shop all</a><a href="#shop" data-nav-category="Sneakers">Sneakers</a><a href="#shop"
+                data-nav-category="Running Shoes">Running</a><a href="#story">Our story</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-button" id="search-focus" aria-label="Search products">⌕</button>
+            <button class="icon-button account-trigger" aria-label="Account">♙</button>
+            <button class="cart-trigger" aria-label="Shopping bag">Bag <span class="cart-count">0</span></button>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-line"></span> A better kind of everyday</p>
+                <h1>Step Into Style,<br>Walk With <span>Confidence.</span></h1>
+                <p class="hero-description">Thoughtfully designed shoes for wherever your next step takes you. Made to
+                    move, made to last.</p>
+                <a class="button button-dark" href="#shop">Shop the collection <span aria-hidden="true">↗</span></a>
+                <div class="hero-proof">
+                    <div class="avatar-stack"><span>J</span><span>M</span><span>A</span></div>
+                    <p><strong>4.9/5</strong> from 2,400+ happy steps</p>
+                </div>
+            </div>
+            <div class="hero-art">
+                <div class="hero-image"></div>
+                <div class="hero-sticker"><span>GOOD<br>ON YOUR<br>FEET.</span><span class="sticker-star">✳</span></div>
+                <div class="hero-caption"><span>THE EVERYDAY 01</span><span>Light on your feet. Big on comfort.</span>
+                </div>
+            </div>
+            <div class="hero-side-label">WALK YOUR OWN WAY — EST. 2024</div>
+        </section>
+
+        <section class="trust-strip" aria-label="Our promises">
+            <span>✳ Made for all-day comfort</span><span>◉ Thoughtful materials</span><span>↗ Free shipping over
+                $120</span><span>♡ Easy 30-day returns</span>
+        </section>
+
+        <section class="section category-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Find your kind of day</p>
+                    <h2>Shop by <em>category</em></h2>
+                </div><a class="text-link" href="#shop">Explore all <span>↗</span></a>
+            </div>
+            <div class="category-grid">
+                <button class="category-card category-sneaker" data-category="Sneakers"><span class="category-number">01
+                        / EVERYDAY</span><span class="category-title">Sneakers <b>↗</b></span></button>
+                <button class="category-card category-run" data-category="Running Shoes"><span
+                        class="category-number">02 / ON THE MOVE</span><span class="category-title">Running
+                        <b>↗</b></span></button>
+                <button class="category-card category-casual" data-category="Casual Shoes"><span
+                        class="category-number">03 / OFF DUTY</span><span class="category-title">Casual
+                        <b>↗</b></span></button>
+            </div>
+        </section>
+
+        <section class="section shop-section" id="shop">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Good shoes, good days</p>
+                    <h2>Find your <em>next pair.</em></h2>
+                </div>
+                <p class="section-note">The pairs you’ll reach for again<br>and again.</p>
+            </div>
+            <div class="shop-toolbar">
+                <div class="category-tabs" role="group" aria-label="Filter by category">
+                    <button class="category-tab active" data-category="All">All shoes</button><button
+                        class="category-tab" data-category="Sneakers">Sneakers</button><button class="category-tab"
+                        data-category="Running Shoes">Running</button><button class="category-tab"
+                        data-category="Sports Shoes">Sports</button><button class="category-tab"
+                        data-category="Casual Shoes">Casual</button><button class="category-tab"
+                        data-category="Formal Shoes">Formal</button><button class="category-tab"
+                        data-category="Sandals">Sandals</button>
+                </div>
+                <div class="toolbar-controls">
+                    <label class="search-box"><span aria-hidden="true">⌕</span><input id="product-search" type="search"
+                            placeholder="Search shoes..." aria-label="Search shoes"></label>
+                    <select id="sort-products" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: low to high</option>
+                        <option value="price-high">Price: high to low</option>
+                        <option value="rating">Top rated</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                    <button class="filter-toggle" id="filter-toggle" aria-expanded="false">Filters
+                        <span>＋</span></button>
+                </div>
+            </div>
+            <div class="filter-panel" id="filter-panel" hidden>
+                <label>Max price <span id="price-output">$220</span><input id="price-filter" type="range" min="40"
+                        max="220" value="220"></label>
+                <label>Size <select id="size-filter">
+                        <option value="">All sizes</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select></label>
+                <label>Color <select id="color-filter">
+                        <option value="">All colors</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Sage">Sage</option>
+                        <option value="Blue">Blue</option>
+                    </select></label>
+                <label>Brand <select id="brand-filter">
+                        <option value="">All brands</option>
+                    </select></label>
+                <button id="clear-filters" class="text-link clear-filter">Clear filters ×</button>
+            </div>
+            <div class="product-meta"><span id="product-count">Showing all pairs</span><span class="sort-hint">COMFORT,
+                    CONSIDERED.</span></div>
+            <div class="product-grid" id="product-grid" aria-live="polite"></div>
+            <div class="empty-state" id="empty-state" hidden><span>◌</span>
+                <h3>No pairs found</h3>
+                <p>Try adjusting your filters or search.</p><button class="button button-dark" id="empty-reset">Clear
+                    filters</button>
+            </div>
+        </section>
+
+        <section class="editorial section" id="story">
+            <div class="editorial-image"><span class="editorial-stamp">LESS, BUT<br>BETTER.</span></div>
+            <div class="editorial-copy">
+                <p class="eyebrow">A little more intentional</p>
+                <h2>Good design<br>should feel <em>like nothing.</em></h2>
+                <p>We believe the best shoes don't ask for your attention. They just make every day feel a little
+                    easier. So we kept the good stuff, left out the noise, and made a pair worth living in.</p><a
+                    href="#shop" class="text-link">Get to know your new favorite <span>↗</span></a>
+            </div>
+        </section>
+
+        <section class="offer-banner">
+            <div>
+                <p class="eyebrow">A little something for you</p>
+                <h2>Good things come<br>to those who <em>move.</em></h2>
+                <p>Take 15% off your first order. Your next favorite is waiting.</p><a href="#shop"
+                    class="button button-light">Find your pair <span>↗</span></a>
+            </div>
+            <div class="offer-art" aria-hidden="true"><span>15</span><span>% OFF</span><i>✳</i></div>
+        </section>
+
+        <section class="newsletter section">
+            <div>
+                <p class="eyebrow">Notes from the good side</p>
+                <h2>A little more <em>StepStyle.</em></h2>
+                <p>New pairs, good stories, and 10% off your first order. No noise.</p>
+            </div>
+            <form id="newsletter-form" class="newsletter-form"><label class="visually-hidden"
+                    for="newsletter-email">Your email address</label><input id="newsletter-email" type="email"
+                    placeholder="Your email address" required><button type="submit" aria-label="Subscribe">Join us
+                    ↗</button><span class="newsletter-message" aria-live="polite"></span></form>
+        </section>
+    </main>
+
+    <footer class="site-footer"><a class="brand brand-footer" href="#home"><span
+                class="brand-mark">S<span>.</span></span><span>stepstyle</span></a>
+        <p>Take the long way home.</p>
+        <div class="footer-links"><a href="#shop">Shop</a><a href="#story">Our story</a><button
+                class="account-trigger">My account</button><button id="admin-trigger">Store admin</button></div><small>©
+            2026 StepStyle Shoes. Made for the everyday.</small>
+    </footer>
+
+    <div class="overlay" id="overlay" hidden>
+        <button class="overlay-scrim" data-close aria-label="Close dialog"></button>
+        <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+            <button class="dialog-close" data-close aria-label="Close">×</button>
+            <div id="dialog-content"></div>
+        </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
